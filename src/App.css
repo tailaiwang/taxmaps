@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+div {
+  font-family: 'Raleway';
+}
+
 h1, h4 {
   text-align: center;
 }
@@ -27,4 +31,11 @@ h1, h4 {
 .icon {
   position: relative;
   right: 0;
+}
+
+.inputForm {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
