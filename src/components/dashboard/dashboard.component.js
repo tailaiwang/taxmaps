@@ -6,7 +6,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="main">
-                <h4>React Router - Report App</ h4>
+                <h4>TaxMaps</ h4>
                 <nav>
                     <NavLink className="main-anchor" to="/personal-breakdown">Personal Breakdown</ NavLink>
                     <NavLink className="main-anchor" to="/political-candidates">Political Candidates</ NavLink>
