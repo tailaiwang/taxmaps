@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Router, Route} from 'react-router';
 import createHistory from 'history/createBrowserHistory';
-import Dashboard from './Components/dashboard/dashboard.component'
-import taxInformationInput from './Components/taxInformationInput';
-import homeScreen from './Components/homeScreen'
+import Dashboard from './components/dashboard/dashboard.component'
+import taxInformationInput from './components/taxInformationInput';
+import homeScreen from './components/homeScreen'
 
 class AppRoute extends Component{
     render() {
