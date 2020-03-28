@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "boostrap": "^2.0.0",
     "chart.js": "^2.9.3",
+    "bootstrap": "^4.4.1",
     "history": "^4.10.1",
     "material-kit-react": "^1.8.0",
     "react": "^16.13.1",
