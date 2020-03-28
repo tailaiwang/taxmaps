@@ -26,7 +26,23 @@ class PersonalBreakdown extends Component {
                     Name:
                     <input type="text" value={this.state.value} onChange={this.handleChange}/>
                 </label>
-                <input type="submit" value="Submit"/>
+                <label>
+                    Yearly Income:
+                    <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                </label>
+                <label>
+                    Yearly Consumption:
+                    <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                </label>
+                <label>
+                    Property Tax:
+                    <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                </label>
+                <label>
+                    Postal Code:
+                    <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                </label>
+                <input type="submit" value="Find My Tax Breakdowns"/>
             </form>
         );
     }
