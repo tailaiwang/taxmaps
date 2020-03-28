@@ -1,31 +1,110 @@
 [
     {
-        "Agriculture, Food and Rural Affairs": 878,
-        "Attorney General": 1933,
-        "Board of Internal Economy": 294,
-        "Children, Community and Social Services": 16666,
-        "Economic Development, Job Creation and Trade": 782,
-        "Education (Base)": 29818,
-        "Teacher's Pension Plan": 1732,
-        "Energy, Northern Development and Mines": 5185,
-        "Environment, Conservation and Parks": 631,
-        "Executive Offices": 40.3,
-        "Finance": 1463,
-        "Francophone Affairs": 6,
-        "Government and Consumer Services": 666,
-        "Health and Long-Term Care": 63510,
-        "Indigenous Affairs": 74,
-        "Infrastructure": 524,
-        "Labour": 306,
-        "Municipal Affairs and Housing": 1117,
-        "Natural Resources and Forestry": 672,
-        "Seniors and Accesibility": 51,
-        "Solicitor General": 2965,
-        "Tourism, Culture and Sport": 1493,
-        "Training, Colleges and Universities": 11371,
-        "Transportation": 5187,
-        "Treasury Board Secretariat": 2738,
-        "Interest on Debt": 13335,
-        "total": 163444
+        "title" : "Agriculture, Food and Rural Affairs",
+        "amount" : 878
+    },
+    {
+        "title" : "Attorney General",
+        "amount" : 1933
+    },
+    {
+        "title" : "Board of Internal Economy",
+        "amount" : 294
+    },
+    {
+        "title" : "Children, Community and Social Services",
+        "amount" : 16666
+    },
+    {
+        "title" : "Economic Development, Job Creation and Trade",
+        "amount" : 782
+    },
+    {
+        "title" : "Education (Base)",
+        "amount" : 29818
+    },
+    {
+        "title" : "Teacher's Pension Plan",
+        "amount" : 1732
+    },
+    {
+        "title" :  "Energy, Northern Development and Mines",
+        "amount" : 5185
+    },
+    {
+        "title" : "Environment, Conservation and Parks",
+        "amount" : 631
+    },
+    {
+        "title" : "Executive Offices",
+        "amount" : 40.3
+    },
+    {
+        "title" : "Finance",
+        "amount" : 1463
+    },
+    {
+        "title" : "Francophone Affairs",
+        "amount" : 6
+    },
+    {
+        "title" : "Government and Consumer Services",
+        "amount" : 666
+    },
+    {
+        "title" : "Health and Long-Term Care",
+        "amount" : 63510
+    },
+    {
+        "title" : "Indigenous Affairs",
+        "amount" : 74
+    },
+    {
+        "title" : "Infrastructure",
+        "amount" : 524
+    },
+    {
+        "title" : "Labour",
+        "amount" : 306
+    },
+    {
+        "title" : "Municipal Affairs and Housing",
+        "amount" : 1117
+    },
+    {
+        "title" : "Natural Resources and Forestry",
+        "amount" : 672
+    },
+    {
+        "title" : "Seniors and Accesibility",
+        "amount" : 51
+    },
+    {
+        "title" : "Solicitor General",
+        "amount" : 2965
+    },
+    {
+        "title" : "Tourism, Culture and Sport",
+        "amount" : 1493
+    },
+    {
+        "title" : "Training, Colleges and Universities",
+        "amount" : 11371
+    },
+    {
+        "title" : "Transportation",
+        "amount" : 5187
+    },
+    {
+        "title" : "Treasury Board Secretariat",
+        "amount" : 2738
+    },
+    {
+        "title" : "Interest on Debt",
+        "amount" : 13335
+    },
+    {
+        "title" : "total",
+        "amount" : 163444
     }
 ]
