@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Router, Route} from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 import Dashboard from './Components/dashboard/dashboard.component'
+import taxInformationInput from './Components/taxInformationInput';
+import homeScreen from './Components/homeScreen'
 
 class AppRoute extends Component{
     render() {
@@ -9,6 +11,8 @@ class AppRoute extends Component{
         return (
             <Router history={history}>
                 <Route path="/" component={Dashboard} />
+                <Route path="/homeScreen" component={homeScreen} />
+                <Route path="/taxInformationInput" component={taxInformationInput} />
             </ Router>
         );
     }

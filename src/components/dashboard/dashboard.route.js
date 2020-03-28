@@ -3,6 +3,7 @@ import {Route} from 'react-router';
 import PersonalBreakdown from './personalbreakdown.component'
 import PoliticalCandidates from './politicalcandidates.component'
 import UploadReceipts from './uploadreceipts.component'
+import homeScreen from '../homeScreen'
 
 class DashboardRouter extends Component {
     render() {

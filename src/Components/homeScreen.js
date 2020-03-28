@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import DashboardRouter from './dashboard/dashboard.route'
+import {Route} from 'react-router';
+
 
 class homeScreen extends Component {
     render() {
         return (
             <h1>this is the homescreen</h1>
-            <div>
-            <DashboardRouter />
-        </ div>
         );
     }
 }
