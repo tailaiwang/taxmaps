@@ -3,28 +3,28 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 class taxInformationInput extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            name: undefined,
-            yearlyIncome: undefined,
-            yearlyConsumption: undefined,
-            propertyTax: undefined,
-            postalCode: undefined
-    };
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    handleSubmit(event) {
-        alert('Hey there! ' + this.state.value);
-        event.preventDefault();
-    }
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         name: undefined,
+    //         yearlyIncome: undefined,
+    //         yearlyConsumption: undefined,
+    //         propertyTax: undefined,
+    //         postalCode: undefined
+    // };
+    //
+    //     this.handleChange = this.handleChange.bind(this);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
+    // }
+    //
+    // handleChange(event) {
+    //     this.setState({value: event.target.value});
+    // }
+    //
+    // handleSubmit(event) {
+    //     alert('Hey there! ' + this.state.value);
+    //     event.preventDefault();
+    // }
 
     render() {
         return (
@@ -47,7 +47,7 @@ class taxInformationInput extends Component {
               </ Form.Group>
               <Form.Group controlId="inputForm.checkPT">
                 <Form.Label>Do you own taxable property?</ Form.Label>
-                <Form.Check inline disables label="Yes" type="radio" id="yesPT"/>
+                <Form.Check inline disables className="radio-btn" label="Yes" type="radio" id="yesPT"/>
                 <Form.Check inline disables label="No" type="radio" id="noPT"/>
               </ Form.Group>
               <Form.Group controlId="inputForm.propertyTax">
@@ -58,12 +58,10 @@ class taxInformationInput extends Component {
                 <Form.Label>Postal Code</ Form.Label>
                 <Form.Control type="" placeholder="" />
               </ Form.Group>
-              <Button variant="success" type="submit">
+              <Button className="submit-btn" variant="success" type="submit">
                 Submit
               </Button>
             </ Form>
-
-
 
         );
     }

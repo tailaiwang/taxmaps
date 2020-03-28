@@ -39,3 +39,12 @@ h1, h4 {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+.radio-btn {
+  margin-left: 10px;
+}
+
+.submit-btn {
+  margin-right: 50%;
+  margin-left: 50%;
+}
