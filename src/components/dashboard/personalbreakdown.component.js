@@ -6,7 +6,7 @@ var jsondata = require('./testing');
 var fedexpenses =require('./assets/json/federal-expenses');
 var colours = require('./assets/colour-set');
 
-const getData = (jdata, colourset) => {
+const getData = (money, jdata, colourset) => {
 	var data = {
 		labels: [],
 		datasets: [{
