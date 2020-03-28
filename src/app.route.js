@@ -3,7 +3,8 @@ import {Router, Route} from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 import Dashboard from './components/dashboard/dashboard.component'
 import taxInformationInput from './components/taxInformationInput';
-import homeScreen from './components/homeScreen'
+import homeScreen from './components/homeScreen';
+
 
 class AppRoute extends Component{
     render() {
