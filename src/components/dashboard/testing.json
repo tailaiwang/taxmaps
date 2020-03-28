@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Red",
+        "decimal" : 300
+    },
+    {
+        "title": "Blue",
+        "decimal" : 50
+    },
+    {
+        "title": "Yellow",
+        "decimal" : 100
+    }
+]
