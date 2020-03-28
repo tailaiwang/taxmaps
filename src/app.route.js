@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Router, Route} from 'react-router';
 import createHistory from 'history/createBrowserHistory';
-import Dashboard from './Components/dashboard/dashboard.component'
+import Dashboard from './components/dashboard/dashboard.component'
 
 class AppRoute extends Component{
     render() {
