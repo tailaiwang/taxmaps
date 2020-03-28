@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router';
-import PersonalBreakdown from './personalBreakdown.component'
-import PoliticalCandidates from './politicalCandidates.component'
-import UploadReceipts from './uploadReceipts.component'
+import PersonalBreakdown from './personalbreakdown.component'
+import PoliticalCandidates from './politicalcandidates.component'
+import UploadReceipts from './uploadreceipts.component'
 
 class DashboardRouter extends Component {
     render() {
