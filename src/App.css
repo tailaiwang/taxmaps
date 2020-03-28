@@ -6,6 +6,7 @@ div {
 
 h1, h4 {
   text-align: center;
+  padding-top: 2%;
 }
 
 .main {
@@ -47,4 +48,11 @@ h1, h4 {
 .submit-btn {
   margin-right: 50%;
   margin-left: 50%;
+}
+
+.poli-tabs a {
+  color: #5cb85c;
+}
+.poli-tabs a:hover {
+  color: grey;
 }
