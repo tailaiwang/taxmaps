@@ -3,7 +3,8 @@ import "../../App.css";
 import {Pie} from 'react-chartjs-2';
 
 var jsondata = require('./testing');
-var colours = require('./assets/colour-set')
+var fedexpenses =require('./assets/json/federal-expenses');
+var colours = require('./assets/colour-set');
 
 const getData = (jdata, colourset) => {
 	var data = {
@@ -15,12 +16,14 @@ const getData = (jdata, colourset) => {
 		}]
 	};
 	var i;
-	console.log(jdata.length);
-	for (i = 0; i < jdata.length; i++) {
+	var end = jdata.length - 1;
+	var decimal;
+	for (i = 0; i < end; i++) {
 		data.labels.push(jdata[i].title);
 		console.log(jdata[i].title);
-		data.datasets[0].data.push(jdata[i].decimal);
-		console.log(jdata[i].decimal);
+		decimal = jdata[i].total / jdata[end]["Total Expenses"]
+		data.datasets[0].data.push(decimal);
+		console.log(decimal);
 		data.datasets[0].backgroundColor.push(colourset[i]);
 		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
 	}
@@ -36,7 +39,7 @@ class PersonalBreakdown extends Component {
             <div className="personalBreakdown">
             <div className="Chart">
               <h1>the chart goes here</h1>
-              <Pie data={getData(jsondata, colours)} />
+              <Pie data={getData(fedexpenses, colours)} />
             </div>
           </div>
         );
