@@ -1,3 +1,7 @@
+# taxmaps
+Submitted to WinHacks 2020, Windsor's first digital hackathon!
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
