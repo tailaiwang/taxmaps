@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Major Transfers to Persons",
+        "Elderly Benefits" : 53366,
+        "Employment Insurance": 18888,
+        "Children's Benefits": 23882,
+        "total": 96136
+    },
+    {
+        "title": "Major Transfers to OtherLevels of Government",
+        "Federal Transfer Support for Health and Other Social Programs": 52729,
+        "Fiscal Arrangements and Other Transfers": 23196,
+        "total": 75925 
+    },
+    {
+        "title": "Direct Program Expenses",
+        "Fuel Charge Proceeds Returned": 664,
+        "Other Transfer Payments": 51753,
+        "Other Direct Program Expenses": 98438,
+        "total": 150855
+    },
+    {
+        "title": "Total Expenses",
+        "Total Program Expenses": 322916,
+        "Public Debt Charges": 23266,
+        "Total Expenses": 346182
+    }
+]

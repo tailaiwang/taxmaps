@@ -1,0 +1,47 @@
+[
+    {
+        "Province": "Alberta",
+        "GST": 5,
+        "PST": 0
+    },
+    {
+        "Province": "British Columbia",
+        "GST": 5,
+        "PST": 7
+    },
+    {
+        "Province": "Manitoba",
+        "GST": 5,
+        "PST": 7
+    },
+    {
+        "Province": "New Brunswick",
+        "GST": 5,
+        "PST": 10
+    },
+    {
+        "Province": "Newfoundland and Labrador",
+        "GST": 5,
+        "PST": 10
+    },
+    {
+        "Province": "Nova Scotia",
+        "GST": 5,
+        "PST": 10
+    },
+    {
+        "Province": "Ontario",
+        "GST": 5,
+        "PST": 8
+    },
+    {
+        "Province": "Prince Edward Island",
+        "GST": 5,
+        "PST": 10 
+    },
+    {
+        "Province": "Quebec",
+        "GST": 5,
+        "HST": 9.98
+    }
+]
