@@ -4,8 +4,9 @@ import {Pie} from 'react-chartjs-2';
 
 var jsondata = require('./testing');
 var colours = require('./assets/colour-set')
+var amt = 100;
 
-const getData = (jdata, colourset) => {
+const getData = (money, jdata, colourset) => {
 	var data = {
 		labels: [],
 		datasets: [{
@@ -19,7 +20,7 @@ const getData = (jdata, colourset) => {
 	for (i = 0; i < jdata.length; i++) {
 		data.labels.push(jdata[i].title);
 		console.log(jdata[i].title);
-		data.datasets[0].data.push(jdata[i].decimal);
+		data.datasets[0].data.push(jdata[i].decimal * money);
 		console.log(jdata[i].decimal);
 		data.datasets[0].backgroundColor.push(colourset[i]);
 		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
@@ -36,7 +37,7 @@ class PersonalBreakdown extends Component {
             <div className="personalBreakdown">
             <div className="Chart">
               <h1>the chart goes here</h1>
-              <Pie data={getData(jsondata, colours)} />
+              <Pie data={getData(amt, jsondata, colours)} />
             </div>
           </div>
         );
