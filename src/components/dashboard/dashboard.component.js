@@ -8,7 +8,7 @@ class Dashboard extends Component {
             <div className="main">
                 <h4>TaxMaps</ h4>
                 <nav>
-                    <NavLink className="main-anchor" to="/taxInformationInput"Tax Input</ NavLink>
+                    <NavLink className="main-anchor" to="/taxInformationInput">Tax Input</ NavLink>
                     <NavLink className="main-anchor" to="/personal-breakdown">Personal Breakdown</ NavLink>
                     <NavLink className="main-anchor" to="/political-candidates">Political Candidates</ NavLink>
                     <NavLink className="main-anchor" to="/upload-receipts">Upload Receipts</ NavLink>
