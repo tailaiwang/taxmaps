@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "../../App.css";
 import { Doughnut } from 'react-chartjs-2';
+import {Container, Row, Col} from 'react-bootstrap';
 import { requirements } from '../taxInformationInput'
 
 var fedexpenses =require('./assets/json/federal-expenses');
@@ -77,17 +78,30 @@ class PersonalBreakdown extends Component {
     render() {
         return (
           <div className="personalBreakdown">
-            <div className="chart">
-              <h1 className="personalHeader">Federal Personal Tax Breakdown</h1>
-              <Doughnut data={getData(fedexpenses, colours)} legend={legendOpts}/>
+						<div className="chart" id="provincialchart">
+							<h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
+							<Doughnut
+							data={getData2(provexpenses, colours)}
+							legend={legendOpts}/>
+						</div>
+
+						<div className="chart" id="provincialchart">
+							<Container>
+								<Row>
+									<Col>
+										<h1 className="personalHeader">Federal Personal Tax Breakdown</h1>
+										<Doughnut data={getData(fedexpenses, colours)} legend={legendOpts}/>
+									</Col>
+									<Col>
+										<div id="federalinfo">
+											<h1>HYC is a BIJEE FAT BULLY</h1>
+										</div>
+									</Col>
+								</Row>
+							</Container>
             </div>
-              
-            <div className="chart">
-              <h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
-              <Doughnut 
-              data={getData2(provexpenses, colours)} 
-              legend={legendOpts}/>
-            </div>
+
+
           </div>
         );
     }
