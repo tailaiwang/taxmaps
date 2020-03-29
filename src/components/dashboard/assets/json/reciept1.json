@@ -1,0 +1,18 @@
+[
+    {
+        "title" : "Education",
+        "amount": 27.34
+    },
+    {
+        "title" : "Medical",
+        "amount": 29.72
+    },
+    {
+        "title" : "Childcare",
+        "amount": 38.60
+    },
+    {
+        "title" : "Small Business Supplies",
+        "amount": 49.72
+    }
+]

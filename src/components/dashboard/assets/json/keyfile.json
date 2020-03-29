@@ -10,5 +10,3 @@
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tailaiwang%40hack-the-north2019.iam.gserviceaccount.com"
 }
-POST https://language.googleapis.com/v1/documents:analyzeEntities?key=AIzaSyAFDRhVE-3B7hn17LHwyIvXxg9uQV3npQc
-export GOOGLE_APPLICATION_CREDENTIALS="keyfile.json"

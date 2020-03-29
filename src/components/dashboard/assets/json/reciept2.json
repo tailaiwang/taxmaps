@@ -1,0 +1,30 @@
+[
+    {
+        "title" : "Charitable Deductions",
+        "amount": 200.34
+    },
+    {
+        "title" : "Education",
+        "amount": 109.72
+    },
+    {
+        "title" : "Medical",
+        "amount": 180.60
+    },
+    {
+        "title" : "Small Business Supplies",
+        "amount": 79.72
+    },
+    {
+        "title" : "Childcare",
+        "amount": 99.99
+    },
+    {
+        "title" : "Professional Development Deductions",
+        "amount": 100.00
+    },
+    {
+        "title" : "Academic Mission",
+        "amount": 100
+    }
+]
