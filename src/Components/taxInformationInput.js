@@ -3,28 +3,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 class taxInformationInput extends Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //         name: undefined,
-    //         yearlyIncome: undefined,
-    //         yearlyConsumption: undefined,
-    //         propertyTax: undefined,
-    //         postalCode: undefined
-    // };
-    //
-    //     this.handleChange = this.handleChange.bind(this);
-    //     this.handleSubmit = this.handleSubmit.bind(this);
-    // }
-    //
-    // handleChange(event) {
-    //     this.setState({value: event.target.value});
-    // }
-    //
-    // handleSubmit(event) {
-    //     alert('Hey there! ' + this.state.value);
-    //     event.preventDefault();
-    // }
 
     render() {
         return (

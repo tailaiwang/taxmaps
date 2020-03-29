@@ -55,8 +55,6 @@ const getData2 = (jdata, colourset) =>{
 	return data;
 }
 
-
-
 class PersonalBreakdown extends Component {
 
     render() {
