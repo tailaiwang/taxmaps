@@ -149,17 +149,17 @@ class PersonalBreakdown extends Component {
 								<Row>
 									<Col className="bdcat">
 										<h3>Povincial Taxes:</h3>
-										<h4>Income Tax Paid: ${}</h4>
-										<h4>GST Paid: ${}</h4>
+										<h4>Income Tax Paid: ${this.state.prov_income_tax}</h4>
+										<h4>GST Paid: ${this.state.GST}</h4>
 									</Col>
 									<Col className="bdcat">
 										<h3>Federal Taxes:</h3>
-										<h4>Income Tax Paid: ${}</h4>
-										<h4>HST Paid: ${}</h4>
+										<h4>Income Tax Paid: ${this.state.fed_income_tax}</h4>
+										<h4>PST Paid: ${this.state.PST}</h4>
 									</Col>
 								</Row>
 								<Row className="bdfin">
-									<h3 id="totalcont">Total Contributions: $</h3>
+		<h3 id="totalcont">Total Contributions: ${this.state.fed_income_tax + this.state.prov_income_tax + this.state.GST + this.state.PST}</h3>
 								</Row>
 							</Container>
 						</div>
