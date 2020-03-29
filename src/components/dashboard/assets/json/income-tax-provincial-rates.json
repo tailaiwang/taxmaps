@@ -1,5 +1,13 @@
 [
     {
+        "Province": "Alberta",
+        "1": 10,
+        "2": 12,
+        "3": 13,
+        "4": 14,
+        "5": 15
+    },
+    {
         "Province": "Newfoundland and Labrador",
         "1": 8.7,
         "2": 14.5,
@@ -52,14 +60,6 @@
         "1": 10.5,
         "2": 12.5,
         "3": 14.5
-    },
-    {
-        "Province": "Alberta",
-        "1": 10,
-        "2": 12,
-        "3": 13,
-        "4": 14,
-        "5": 15
     },
     {
         "Province": "British Columbia",

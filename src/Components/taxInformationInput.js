@@ -45,7 +45,7 @@ class taxInformationInput extends Component {
     requirements.property_tax = this.state.property_tax;
     requirements.postal = this.state.postal;
 
-    console.log("good");
+    console.log(this.state);
   }
     render() {
         return (
@@ -55,7 +55,7 @@ class taxInformationInput extends Component {
                   <Form.Control
                   required
                   name = "income"
-                  type="text"
+                  type="Number"
                   placeholder=""
                   value={this.state.income}
                   onChange={this.handleChange}
