@@ -10,13 +10,13 @@ class PoliticalCandidates extends Component {
               <div>
               <Tabs defaultActiveKey="profile" id="tab-cands" className="poli-tabs">
                 <Tab eventKey="can1" title="Candiadate A">
-                  <p>I THINK RAHMA IS THE BEST CANDIDATE</p>
+                  <p>I THINK HONG YI IS THE BEST CANDIDATE</p>
                 </Tab>
                 <Tab eventKey="can2" title="Candidate B">
-                  <p>THE SECOND BEST IS DANLU CUZ HES OKAY AT LOL</p>
+                  <p>THE SECOND BEST IS TAILAI AND DANLU CUZ HES OKAY AT LOL</p>
                 </Tab>
                 <Tab eventKey="can3" title="Candidate C">
-                  <p>TIE FOR THIRD PLACE W UKNOW WHO</p>
+                  <p>TIE FOR THIRD PLACE W UKNOW WHO (R GILLAN)</p>
                 </Tab>
                </Tabs>
               </div>
