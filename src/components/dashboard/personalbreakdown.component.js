@@ -74,6 +74,23 @@ const legendOpts = {
   }
 };
 
+const legendOpts2 = {
+  display: true,
+  position: 'bottom',
+  fullWidth: true,
+  fullHeight: true,
+  reverse: false,
+  boxWidth: 50,
+  align: 'start',
+  labels: {
+    fontColor: 'rgb(58, 62, 65)',
+    padding: 13,
+    fontSize: 14,
+    fontFamily: 'Raleway',
+    usePointStyle: false
+  }
+};
+
 class PersonalBreakdown extends Component {
     render() {
         return (
@@ -90,18 +107,22 @@ class PersonalBreakdown extends Component {
 								<Row>
 									<Col>
 										<h1 className="personalHeader">Federal Personal Tax Breakdown</h1>
-										<Doughnut data={getData(fedexpenses, colours)} legend={legendOpts}/>
+										<Doughnut data={getData(fedexpenses, colours)} legend={legendOpts2}/>
 									</Col>
 									<Col>
-										<div id="federalinfo">
-											<h1>HYC is a BIJEE FAT BULLY</h1>
-										</div>
+											<h1>What does this mean?</h1>
+                      <ul>
+                        <li><strong className="personstransfer">Major Transfers to Persons</strong>: This refers to payments made by the government to individuals 
+                          for income support and income supplement. The three major categories are elderly benefits, employment insurance, children's benefits.</li>
+                        <li><strong className="personsgov">Major Transfers to Other Levels of Government</strong>: The Government provides financial support to provincial and territorial 
+                        governments to assist them in the provision of programs and services. There are four main transfer programs are:  
+                        Canada Health Transfer, the Canada Social Transfer, Equalization and Territorial Formula Financing.</li>
+                        <li><strong className="personsdpe">Direct Program Expenses</strong>: These are direct investments into federal programs such as parks, health care, etc. </li>
+                      </ul>
 									</Col>
 								</Row>
 							</Container>
             </div>
-
-
           </div>
         );
     }

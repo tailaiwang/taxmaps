@@ -98,10 +98,19 @@ h1, h4 {
   margin-right: auto;
 }
 
-#federalchart {
-}
-
 #federalinfo {
   background-color: pink;
   border-radius: 5px;
+}
+
+.personstransfer {
+  background-color: #ff6384;
+}
+
+.personsgov {
+  background-color: darkturquoise;
+}
+
+.personsdpe {
+  background-color: #ffce56;
 }
