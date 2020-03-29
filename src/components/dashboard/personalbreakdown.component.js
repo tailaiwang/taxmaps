@@ -13,7 +13,7 @@ const getData = (jdata, colourset) => {
 		datasets: [{
 			data: [],
 			backgroundColor: [],
-			hoverBackgroundColor: []
+      hoverBackgroundColor: [],
 		}]
 	};
 	var i;
@@ -21,10 +21,8 @@ const getData = (jdata, colourset) => {
 	var decimal;
 	for (i = 0; i < end; i++) {
 		data.labels.push(jdata[i].title);
-		console.log(jdata[i].title);
 		decimal = jdata[i].total / jdata[end]["Total Expenses"]
 		data.datasets[0].data.push(decimal);
-		console.log(decimal);
 		data.datasets[0].backgroundColor.push(colourset[i]);
 		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
 	}
@@ -60,11 +58,13 @@ const legendOpts = {
   fullHeight: true,
   reverse: false,
   boxWidth: 50,
+  align: 'start',
   labels: {
     fontColor: 'rgb(58, 62, 65)',
     padding: 13,
     fontSize: 14,
-    fontFamily: 'Raleway'
+    fontFamily: 'Raleway',
+    usePointStyle: false
   }
 };
 
