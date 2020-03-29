@@ -7,7 +7,6 @@ class taxInformationInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: undefined,
       income: undefined,
       consumption: undefined,
       property: undefined,
@@ -16,15 +15,21 @@ class taxInformationInput extends Component {
     }
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChange = event => {
+
+    const info = event.target.name;
+    const value = event.target.value;
+
+    this.setState({
+        [info]: value
+      }
+    );
   }
 
   handleSubmit(event) {
     event.preventDefault();
     console.log(event.target.name);
     this.setState({
-      name: event.target.name,
       income: event.target.income,
       consumption: event.target.consumption,
       property_tax: event.target.property_tax,
@@ -34,19 +39,29 @@ class taxInformationInput extends Component {
   }
     render() {
         return (
-
             <Form className="inputForm">
-              <Form.Group controlId="inputForm.name">
-                <Form.Label>Name</ Form.Label>
-                  <Form.Control type="" placeholder="John Doe" />
-              </ Form.Group>
               <Form.Group controlId="inputForm.yearlyIncome">
                 <Form.Label>Yearly Income</ Form.Label>
-                  <Form.Control type="" placeholder="" />
+                  <Form.Control
+                  required
+                  name = "income"
+                  type="text"
+                  placeholder=""
+                  value={this.state.income}
+                  onChange={this.handleChange}
+                  />
+                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </ Form.Group>
               <Form.Group controlId="inputForm.yearlyConsumption">
                 <Form.Label>Yearly Consumpution</ Form.Label>
-                <Form.Control type="" placeholder="" />
+                <Form.Control
+                required
+                name = "consumption"
+                type="text"
+                placeholder=""
+                value={this.state.consumption}
+                onChange={this.handleChange}
+                />
                 <Form.Text className="text-muted">
                   Enter an estimate of your annual spending
                 </ Form.Text>
@@ -58,17 +73,28 @@ class taxInformationInput extends Component {
               </ Form.Group>
               <Form.Group controlId="inputForm.propertyTax">
                 <Form.Label>Property Tax</ Form.Label>
-                <Form.Control type="" placeholder="" />
+                <Form.Control
+                name = "property_tax"
+                required
+                type="text"
+                placeholder=""
+                onChange={this.handleChange}
+                />
               </ Form.Group>
               <Form.Group controlId="inputForm.postalCode">
                 <Form.Label>Postal Code</ Form.Label>
-                <Form.Control type="" placeholder="" />
+                <Form.Control
+                name = "postal"
+                required
+                type="text"
+                placeholder=""
+                onChange={this.handleChange}
+                />
               </ Form.Group>
               <Button className="submit-btn" variant="success" type="submit" onClick={this.handleSubmit.bind(this)}>
                 Submit
               </Button>
             </ Form>
-
         );
     }
 }
