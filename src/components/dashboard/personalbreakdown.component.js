@@ -10,39 +10,32 @@ var colours = require('./assets/colour-set')[0];
 var colours_fed = require('./assets/colour-set')[1];
 
 var income_fed_rates = require('./assets/json/income-tax-federal-rates');
-var income_fed_brackets = require('./assets/json/income-tax-federal')[0];
-var income_prov_rates = require('./assets/json/income-tax-federal-rates');
-var income_prov_brackets = require('./assets/json/income-tax-federal-rates');
-var sales_tax = require('./assets/json/sales-tax');
+var income_fed_brackets = require('./assets/json/income-tax-federal');
+var income_prov_rates = require('./assets/json/income-tax-provincial-rates');
+var income_prov_brackets = require('./assets/json/income-tax-provincial');
+//var sales_tax = require('./assets/json/sales-tax');
 
 const federal_income_tax = (income, fed_brackets, fed_rates) => {
-  var total = 0;
-  var bracket_one_full = fed_bracket[0]["1"] * fed_rates[0]["1"];
-  var bracket_two_full = (fed_bracket[0]["2"] - fed_bracket[0]["1"]) * fed_rates[0]["2"];
-  var bracket_three_full = (fed_bracket[0]["3"] - fed_bracket[0]["2"]) * fed_rates[0]["3"];
-  var bracket_four_full = (fed_bracket[0]["4"] - fed_bracket[0]["3"]) * fed_rates[0]["4"];
+  var bracket_one_full = fed_brackets[0]["1"] * fed_rates[0]["1"]/100;
+  var bracket_two_full = (fed_brackets[0]["2"] - fed_brackets[0]["1"]) * fed_rates[0]["2"]/100;
+  var bracket_three_full = (fed_brackets[0]["3"] - fed_brackets[0]["2"]) * fed_rates[0]["3"]/100;
+  var bracket_four_full = (fed_brackets[0]["4"] - fed_brackets[0]["3"]) * fed_rates[0]["4"]/100;
 
   if (income <= fed_brackets[0]["1"]) {
-    return income * fed_rates[0]["1"];
+    return income * fed_rates[0]["1"]/100;
   }
-  if (income > fed_bracket[0]["1"] && income <= fed_bracket[0]["2"]) {
-	return bracket_one_full + 
+  if (income > fed_brackets[0]["1"] && income <= fed_brackets[0]["2"]) {
+	return bracket_one_full + (income - fed_brackets[0]["1"]) * fed_rates[0]["2"]/100;
   }
-
-
-  if (income > fed_bracket[0]["1"]) {
-    total += fed_bracket[0]["1"] * fed_rates[0]["1"];
+  if (income > fed_brackets[0]["2"] && income <= fed_brackets[0]["3"]) {
+	return bracket_one_full + bracket_two_full + (income - fed_brackets[0]["2"]) * fed_rates[0]["3"]/100;
   }
-  if (income > fed_bracket[0]["2"]) {
-    total += (fed_bracket[0]["2"] - fed_bracket[0]["1"]) * fed_rates[0]["2"];
+  if (income > fed_brackets[0]["3"] && income <= fed_brackets[0]["4"]) {
+	return bracket_one_full + bracket_two_full + bracket_three_full + (income - fed_brackets[0]["3"]) * fed_rates[0]["4"]/100;
   }
-  if (income > fed_bracket[0]["3"]) {
-    total += (fed_bracket[0]["3"]  - fed_bracket[0]["2"]) * fed_rates[0]["3"];
+  if (income > fed_brackets[0]["4"]) {
+	return bracket_one_full + bracket_two_full + bracket_three_full + bracket_four_full + (income - fed_brackets[0]["4"]) * fed_rates[0]["5"]/100;
   }
-  if (income > fed_bracket[0]["4"]) {
-    total += (fed_bracket[0]["4"] - fed_bracket[0]["3"]) * fed_rates[0]["4"];
-  }
-
 } 
 
 
