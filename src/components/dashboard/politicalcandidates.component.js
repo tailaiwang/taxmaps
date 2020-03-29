@@ -51,6 +51,23 @@ const legendOpts = {
   }
 };
 
+const legendOpts2 = {
+  display: true,
+  position: 'bottom',
+  fullWidth: true,
+  fullHeight: true,
+  reverse: false,
+  boxWidth: 50,
+  align: 'start',
+  labels: {
+    fontColor: 'rgb(58, 62, 65)',
+    padding: 13,
+    fontSize: 14,
+    fontFamily: 'Raleway',
+    usePointStyle: false
+  }
+};
+
 class PoliticalCandidates extends Component {
     render() {
         return (
@@ -62,19 +79,19 @@ class PoliticalCandidates extends Component {
                   <h4>Liberal Party Policy Implementation Costs (2019-2020)</h4>
                   <Pie data={getData(trudeaupolicy, colours)} legend={legendOpts}/>
                   <h4>Liberal Party Operating Budget (2019-2020)</h4>
-                  <Pie data={getData(trudeaubudget, colours)} legend={legendOpts}/>
+                  <Pie data={getData(trudeaubudget, colours)} legend={legendOpts2}/>
                 </Tab>
                 <Tab eventKey="can2" title="Andrew Scheer">
                   <h4>Conservative Party Proposed Policy Implementation Costs (2019 Election)</h4>
                   <Pie data={getData(scheerpolicy, colours)} legend={legendOpts}/>
                   <h4>Conservative Party Proposed Operating Budget (2019 Election)</h4>
-                  <Pie data={getData(scheerbudget, colours)} legend={legendOpts}/>
+                  <Pie data={getData(scheerbudget, colours)} legend={legendOpts2}/>
                 </Tab>
                 <Tab eventKey="can3" title="Jagmeet Singh">
                   <h4>New Democratic Party Proposed Policy Implementation Costs (2019 Election)</h4>
                   <Pie data={getData(jagmeetpolicy, colours)} legend={legendOpts}/>
                   <h4>New Democratic Party Party Proposed Operating Budget (2019 Election)</h4>
-                  <Pie data={getData(jagmeetbudget, colours)} legend={legendOpts}/>
+                  <Pie data={getData(jagmeetbudget, colours)} legend={legendOpts2}/>
                 </Tab>
                </Tabs>
               </div>

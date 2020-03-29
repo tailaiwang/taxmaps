@@ -70,7 +70,6 @@ const legendOpts = {
 
 class PersonalBreakdown extends Component {
     render() {
-
         return (
           <div className="personalBreakdown">
             <div className="chart">
