@@ -153,6 +153,8 @@ h4 {
   margin: 10px;
   border-radius: 5px;
   padding: 10px;
+  text-align: center;
+  display: block !important;
 }
 #totalcont {
   margin-left: auto;

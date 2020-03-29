@@ -134,12 +134,12 @@ class PersonalBreakdown extends Component {
 		  prov_income_tax: income_tax(requirements.income, income_prov_brackets[5], income_prov_rates[5]).toFixed(2),
 		  PST: getPST(requirements.consumption, sales_tax[6]).toFixed(2),
 		  GST: getGST(requirements.consumption, sales_tax[6]).toFixed(2),
-		  total_contribution: 
+		  total_contribution:
 		  (income_tax(requirements.income, income_fed_brackets[0], income_fed_rates[0]) +
 		  income_tax(requirements.income, income_prov_brackets[5], income_prov_rates[5]) +
 		  getPST(requirements.consumption, sales_tax[6]) +
 		  getGST(requirements.consumption, sales_tax[6])).toFixed(2),
-		  prov_contribution: 
+		  prov_contribution:
 		  (income_tax(requirements.income, income_prov_brackets[5], income_prov_rates[5]) +
 		  getPST(requirements.consumption, sales_tax[6])).toFixed(2),
 		  fed_contribution:
@@ -193,7 +193,9 @@ class PersonalBreakdown extends Component {
                       </ul>
 									</Col>
 								</Row>
-                <h1>Your provincial contribution is: {this.state.prov_contribution}</h1>
+								<Row className="bdfin">
+									<h3>Your provincial contribution is: ${this.state.prov_contribution}</h3>
+								</Row>
 							</Container>
             </div>
 
@@ -203,7 +205,9 @@ class PersonalBreakdown extends Component {
 							<Doughnut
 							data={getData2(this.state.prov_contribution, provexpenses, colours)}
 							legend={legendOpts}/>
-              <h1>Your federal contribution is: {this.state.fed_contribution}</h1>
+							<Row className="bdfin">
+								<h3>Your federal contribution is: ${this.state.fed_contribution}</h3>
+							</Row>
 						</div>
           </div>
         );
