@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import history from 'history/createBrowserHistory';
+
 
 
 class taxInformationInput extends Component {
@@ -24,17 +26,11 @@ class taxInformationInput extends Component {
         [info]: value
       }
     );
+    console.log(this.state);
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(event.target.name);
-    this.setState({
-      income: event.target.income,
-      consumption: event.target.consumption,
-      property_tax: event.target.property_tax,
-      postal: event.target.postal
-    })
     console.log(this.state);
   }
     render() {
@@ -68,8 +64,19 @@ class taxInformationInput extends Component {
               </ Form.Group>
               <Form.Group controlId="inputForm.checkPT">
                 <Form.Label>Do you own taxable property?</ Form.Label>
-                <Form.Check inline disables className="radio-btn" label="Yes" type="radio" id="yesPT"/>
-                <Form.Check inline disables label="No" type="radio" id="noPT"/>
+                <Form.Check
+                inline
+                disables
+                className="radio-btn"
+                label="Yes"
+                type="radio"
+                id="yesPT"/>
+                <Form.Check
+                inline
+                disables
+                label="No"
+                type="radio"
+                id="noPT"/>
               </ Form.Group>
               <Form.Group controlId="inputForm.propertyTax">
                 <Form.Label>Property Tax</ Form.Label>
@@ -91,7 +98,7 @@ class taxInformationInput extends Component {
                 onChange={this.handleChange}
                 />
               </ Form.Group>
-              <Button className="submit-btn" variant="success" type="submit" onClick={this.handleSubmit.bind(this)}>
+              <Button className="submit-btn" variant="success" type="submit" onClick={this.handleSubmit.bind(this)} >
                 Submit
               </Button>
             </ Form>
