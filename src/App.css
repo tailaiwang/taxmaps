@@ -96,11 +96,17 @@ h1, h4 {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5%;
+}
+
+#federalchart {
+  margin-top: 5%;
 }
 
 #federalinfo {
   background-color: pink;
   border-radius: 5px;
+
 }
 
 .personstransfer {

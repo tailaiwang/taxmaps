@@ -101,8 +101,8 @@ class PersonalBreakdown extends Component {
 							data={getData2(provexpenses, colours)}
 							legend={legendOpts}/>
 						</div>
-
-						<div className="chart" id="provincialchart">
+						<hr />
+						<div className="chart" id="federalchart">
 							<Container>
 								<Row>
 									<Col>
@@ -112,10 +112,10 @@ class PersonalBreakdown extends Component {
 									<Col>
 											<h1>What does this mean?</h1>
                       <ul>
-                        <li><strong className="personstransfer">Major Transfers to Persons</strong>: This refers to payments made by the government to individuals 
+                        <li><strong className="personstransfer">Major Transfers to Persons</strong>: This refers to payments made by the government to individuals
                           for income support and income supplement. The three major categories are elderly benefits, employment insurance, children's benefits.</li>
-                        <li><strong className="personsgov">Major Transfers to Other Levels of Government</strong>: The Government provides financial support to provincial and territorial 
-                        governments to assist them in the provision of programs and services. There are four main transfer programs are:  
+                        <li><strong className="personsgov">Major Transfers to Other Levels of Government</strong>: The Government provides financial support to provincial and territorial
+                        governments to assist them in the provision of programs and services. There are four main transfer programs are:
                         Canada Health Transfer, the Canada Social Transfer, Equalization and Territorial Formula Financing.</li>
                         <li><strong className="personsdpe">Direct Program Expenses</strong>: These are direct investments into federal programs such as parks, health care, etc. </li>
                       </ul>
