@@ -2,8 +2,36 @@ import React, {Component} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-class taxInformationInput extends Component {
 
+class taxInformationInput extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: undefined,
+      income: undefined,
+      consumption: undefined,
+      property: undefined,
+      property_tax: undefined,
+      postal: undefined
+    }
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(event.target.name);
+    this.setState({
+      name: event.target.name,
+      income: event.target.income,
+      consumption: event.target.consumption,
+      property_tax: event.target.property_tax,
+      postal: event.target.postal
+    })
+    console.log(this.state);
+  }
     render() {
         return (
 
@@ -36,7 +64,7 @@ class taxInformationInput extends Component {
                 <Form.Label>Postal Code</ Form.Label>
                 <Form.Control type="" placeholder="" />
               </ Form.Group>
-              <Button className="submit-btn" variant="success" type="submit">
+              <Button className="submit-btn" variant="success" type="submit" onClick={this.handleSubmit.bind(this)}>
                 Submit
               </Button>
             </ Form>
