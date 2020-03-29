@@ -10,7 +10,7 @@ class Dashboard extends Component {
         return (
             <div className="main">
             <Navbar bg="light" variant="light">
-              <Navbar.Brand href="#home">
+              <Navbar.Brand href="../homescreen">
               <img
                 alt="logo"
                 src={logo}

@@ -13,6 +13,7 @@
     "chart.js": "^2.9.3",
     "google-map-react": "^1.1.7",
     "google-maps-react": "^2.0.2",
+    "googleapis": "^48.0.0",
     "history": "^4.10.1",
     "material-kit-react": "^1.8.0",
     "react": "^16.13.1",
