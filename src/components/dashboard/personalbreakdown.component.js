@@ -199,7 +199,7 @@ class PersonalBreakdown extends Component {
 							</Container>
             </div>
 
-						<hr />
+						<hr/>
 						<div className="chart" id="provincialchart">
 							<h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
 							<Doughnut
