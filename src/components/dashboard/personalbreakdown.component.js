@@ -15,8 +15,6 @@ var income_prov_rates = require('./assets/json/income-tax-provincial-rates');
 var income_prov_brackets = require('./assets/json/income-tax-provincial');
 var sales_tax = require('./assets/json/sales-tax');
 
- 
-
 const income_tax = (income, brackets, rates) => {
   var bracket_one_full = brackets["1"] * rates["1"]/100;
   var bracket_two_full = (brackets["2"] - brackets["1"]) * rates["2"]/100;
@@ -49,7 +47,7 @@ const getPST = (consumption, rates) => {
 }
 
 
-const getData = (jdata, colourset) => {
+const getData = (contribution, jdata, colourset) => {
 	var data = {
 		labels: [],
 		datasets: [{
@@ -64,14 +62,14 @@ const getData = (jdata, colourset) => {
 	for (i = 0; i < end; i++) {
 		data.labels.push(jdata[i].title);
 		decimal = jdata[i].total / jdata[end]["Total Expenses"]
-		data.datasets[0].data.push(decimal);
+		data.datasets[0].data.push((decimal * contribution).toFixed(2));
 		data.datasets[0].backgroundColor.push(colourset[i]);
 		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
 	}
 	return data;
 }
 
-const getData2 = (jdata, colourset) =>{
+const getData2 = (contribution, jdata, colourset) =>{
 	var data = {
 		labels: [],
 		datasets: [{
@@ -86,8 +84,7 @@ const getData2 = (jdata, colourset) =>{
 	for (i = 0; i < end; i++) {
 		data.labels.push(jdata[i].title);
 		decimal = jdata[i].amount / jdata[end].amount;
-		data.datasets[0].data.push(decimal);
-		console.log(requirements.property_tax);
+		data.datasets[0].data.push((decimal * contribution).toFixed(2));
 		data.datasets[0].backgroundColor.push(colourset[i]);
 		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
 	}
@@ -137,15 +134,23 @@ class PersonalBreakdown extends Component {
 		  prov_income_tax: income_tax(requirements.income, income_prov_brackets[5], income_prov_rates[5]).toFixed(2),
 		  PST: getPST(requirements.consumption, sales_tax[6]).toFixed(2),
 		  GST: getGST(requirements.consumption, sales_tax[6]).toFixed(2),
-		  total_contribution: 
+		  total_contribution:
 		  (income_tax(requirements.income, income_fed_brackets[0], income_fed_rates[0]) +
 		  income_tax(requirements.income, income_prov_brackets[5], income_prov_rates[5]) +
 		  getPST(requirements.consumption, sales_tax[6]) +
+		  getGST(requirements.consumption, sales_tax[6])).toFixed(2),
+		  prov_contribution:
+		  (income_tax(requirements.income, income_prov_brackets[5], income_prov_rates[5]) +
+		  getPST(requirements.consumption, sales_tax[6])).toFixed(2),
+		  fed_contribution:
+		  (income_tax(requirements.income, income_fed_brackets[0], income_fed_rates[0]) +
 		  getGST(requirements.consumption, sales_tax[6])).toFixed(2)
 		}
-	  }
+    }
+
     render() {
-		console.log(this.state);
+    console.log(this.state);
+
         return (
           <div className="personalBreakdown">
 						<div id="personalinfo">
@@ -153,14 +158,14 @@ class PersonalBreakdown extends Component {
 							<Container>
 								<Row>
 									<Col className="bdcat">
-										<h3>Povincial Taxes:</h3>
+										<h3>Provincial Taxes:</h3>
 										<h4>Income Tax Paid: ${this.state.prov_income_tax}</h4>
-										<h4>GST Paid: ${this.state.GST}</h4>
+										<h4>PST Paid: ${this.state.PST}</h4>
 									</Col>
 									<Col className="bdcat">
 										<h3>Federal Taxes:</h3>
 										<h4>Income Tax Paid: ${this.state.fed_income_tax}</h4>
-										<h4>PST Paid: ${this.state.PST}</h4>
+										<h4>GST Paid: ${this.state.GST}</h4>
 									</Col>
 								</Row>
 								<Row className="bdfin">
@@ -169,19 +174,12 @@ class PersonalBreakdown extends Component {
 							</Container>
 						</div>
 						<hr />
-						<div className="chart" id="provincialchart">
-							<h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
-							<Doughnut
-							data={getData2(provexpenses, colours)}
-							legend={legendOpts}/>
-						</div>
-						<hr />
-						<div className="chart" id="federalchart">
+            <div className="chart" id="federalchart">
 							<Container>
 								<Row>
 									<Col>
 										<h1 className="personalHeader">Federal Personal Tax Breakdown</h1>
-										<Doughnut data={getData(fedexpenses, colours_fed)} legend={legendOpts2}/>
+										<Doughnut data={getData(this.state.fed_contribution, fedexpenses, colours_fed)} legend={legendOpts2}/>
 									</Col>
 									<Col>
 											<h1>What does this mean?</h1>
@@ -195,8 +193,22 @@ class PersonalBreakdown extends Component {
                       </ul>
 									</Col>
 								</Row>
+								<Row className="bdfin">
+									<h3>Your provincial contribution is: ${this.state.prov_contribution}</h3>
+								</Row>
 							</Container>
             </div>
+
+						<hr/>
+						<div className="chart" id="provincialchart">
+							<h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
+							<Doughnut
+							data={getData2(this.state.prov_contribution, provexpenses, colours)}
+							legend={legendOpts}/>
+							<Row className="bdfin">
+								<h3>Your federal contribution is: ${this.state.fed_contribution}</h3>
+							</Row>
+						</div>
           </div>
         );
     }
