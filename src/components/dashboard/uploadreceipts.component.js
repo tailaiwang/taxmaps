@@ -30,7 +30,7 @@ class UploadReceipts extends Component {
                 </aside>
                 <div {...getRootProps({className: 'dropzone'})}>
                   <input {...getInputProps()} />
-                  <p>Drag 'n' drop some files here, or click to select files</p>
+                  <p id="dropzone-txt">Drag & drop some files here, or click to select files</p>
                 </div>
               </section>
             )}
