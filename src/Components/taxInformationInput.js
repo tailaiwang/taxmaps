@@ -55,7 +55,7 @@ class taxInformationInput extends Component {
                   <Form.Control
                   required
                   name = "income"
-                  type="text"
+                  type="Number"
                   placeholder=""
                   value={this.state.income}
                   onChange={this.handleChange}
