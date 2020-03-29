@@ -5,11 +5,7 @@
     },
     {
         "title": "Canadian Space Agency",
-        "amount": 10
-    },
-    {
-        "title": "Crown-Indigenous Relations and Northern Affairs Canada ",
-        "amount": 8
+        "amount": 30
     },
     {
         "title": "Department of Finance Canada",
@@ -17,7 +13,7 @@
     },
     {
         "title": "Employment and Social Development Canada",
-        "amount": 62
+        "amount": 42
     },
     {
         "title": "Fisheries and Oceans Canada",
@@ -25,11 +21,7 @@
     },
     {
         "title": "Global Affairs Canada",
-        "amount": 59
-    },
-    {
-        "title": "Indigenous Services Canada",
-        "amount": 37
+        "amount": 29
     },
     {
         "title": "Infrastructure Canada",
@@ -44,24 +36,8 @@
         "amount": 86
     },
     {
-        "title": "National Energy Board",
-        "amount": 1
-    },
-    {
         "title": "Natural Resources Canada",
         "amount": 17
-    },
-    {
-        "title": "Parks Canada",
-        "amount": 0
-    },
-    {
-        "title": "Parole Board of Canada",
-        "amount": 1
-    },
-    {
-        "title": "Public Safety Canada",
-        "amount": 0
     },
     {
         "title": "Public Services and Procurement Canada",
@@ -69,7 +45,7 @@
     },
     {
         "title": "Royal Canadian Mounted Police",
-        "amount": 93
+        "amount": 103
     },
     {
         "title": "Transport Canada",
@@ -77,7 +53,7 @@
     },
     {
         "title": "Veterans Affairs Canada",
-        "amount": 240
+        "amount": 320
     },
     {
         "title": "Western Economic Diversification Canada",
@@ -89,6 +65,6 @@
     },
     {
         "title": "Total",
-        "amount": 852
+        "amount": 865
     }
 ]

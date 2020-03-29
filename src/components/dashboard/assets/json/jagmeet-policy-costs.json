@@ -5,11 +5,11 @@
     },
     {
         "title": "Canadian Space Agency",
-        "amount": 10
+        "amount": 30
     },
     {
         "title": "Crown-Indigenous Relations and Northern Affairs Canada ",
-        "amount": 8
+        "amount": 12
     },
     {
         "title": "Department of Finance Canada",
@@ -17,11 +17,11 @@
     },
     {
         "title": "Employment and Social Development Canada",
-        "amount": 62
+        "amount": 82
     },
     {
         "title": "Fisheries and Oceans Canada",
-        "amount": 3
+        "amount": 10
     },
     {
         "title": "Global Affairs Canada",
@@ -29,11 +29,11 @@
     },
     {
         "title": "Indigenous Services Canada",
-        "amount": 37
+        "amount": 57
     },
     {
         "title": "Infrastructure Canada",
-        "amount": 24
+        "amount": 44
     },
     {
         "title": "Regional Development Agencies",
@@ -53,35 +53,27 @@
     },
     {
         "title": "Parks Canada",
-        "amount": 0
+        "amount": 20
     },
     {
         "title": "Parole Board of Canada",
-        "amount": 1
+        "amount": 33
     },
     {
         "title": "Public Safety Canada",
-        "amount": 0
+        "amount": 10
     },
     {
         "title": "Public Services and Procurement Canada",
-        "amount": 64
+        "amount": 84
     },
     {
         "title": "Royal Canadian Mounted Police",
-        "amount": 93
-    },
-    {
-        "title": "Transport Canada",
-        "amount": 3
+        "amount": 63
     },
     {
         "title": "Veterans Affairs Canada",
-        "amount": 240
-    },
-    {
-        "title": "Western Economic Diversification Canada",
-        "amount": 5
+        "amount": 200
     },
     {
         "title": "Windsor-Detroit Bridge Authority",
@@ -89,6 +81,6 @@
     },
     {
         "title": "Total",
-        "amount": 852
+        "amount": 947
     }
 ]

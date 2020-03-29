@@ -1,11 +1,11 @@
 [
     {
         "title": "Administrative Tribunals Support Service of Canada",
-        "amount": 4
+        "amount": 5
     },
     {
         "title": "Agriculture and Agri-Food Canada",
-        "amount": 95
+        "amount": 76
     },
     {
         "title": "Atlantic Canada Opportunities Agency",
@@ -13,31 +13,31 @@
     },
     {
         "title": "Canada Border Services Agency",
-        "amount": 1257
+        "amount": 1011
     },
     {
         "title": "Canada Economic Development for Quebec Regions",
-        "amount": 60
+        "amount": 50
     },
     {
         "title": "Canada Mortgage and Housing Corporation",
-        "amount": 507
+        "amount": 712
     },
     {
         "title": "Canada Revenue Agency",
-        "amount": 367
+        "amount": 247
     },
     {
         "title": "Canadian Air Transport Security Authority",
-        "amount": 597
+        "amount": 340
     },
     {
         "title": "Canadian Centre for Occupational Health and Safety",
-        "amount": 4
+        "amount": 3
     },
     {
         "title": "Canadian Food Inspection Agency",
-        "amount": 266
+        "amount": 210
     },
     {
         "title": "Canadian Heritage",
@@ -45,11 +45,11 @@
     },
     {
         "title": "Canadian Human Rights Commission",
-        "amount": 4
+        "amount": 9
     },
     {
         "title": "Canadian Institutes of Health Research",
-        "amount": 46
+        "amount": 235
     },
     {
         "title": "Canadian Northern Economic Development Agency",
@@ -61,11 +61,11 @@
     },
     {
         "title": "Canadian Security Intelligence Service",
-        "amount": 97
+        "amount": 69
     },
     {
         "title": "Canadian Transportation Agency",
-        "amount": 0.3
+        "amount": 0.5
     },
     {
         "title": "Civilian Review and Complaints Commission for the RCMP",
@@ -73,7 +73,7 @@
     },
     {
         "title": "Communications Security Establishment Canada",
-        "amount": 118
+        "amount": 111
     },
     {
         "title": "Correctional Service Canada",
@@ -81,7 +81,7 @@
     },
     {
         "title": "Courts Administration Service",
-        "amount": 37
+        "amount": 32
     },
     {
         "title": "Crown-Indigenous Relations and Northern Affairs Canada",
@@ -105,31 +105,31 @@
     },
     {
         "title": "Environment and Climate Change Canada",
-        "amount": 107
+        "amount": 456
     },
     {
         "title": "Federal Economic Development Agency for Southern Ontario",
-        "amount": 12
+        "amount": 10
     },
     {
         "title": "Financial Transactions and Reports Analysis Centre of Canada",
-        "amount": 20
+        "amount": 15
     },
     {
         "title": "Fisheries and Oceans Canada",
-        "amount": 57
+        "amount": 67
     },
     {
         "title": "Global Affairs Canada",
-        "amount": 658
+        "amount": 567
     },
     {
         "title": "Health Canada",
-        "amount": 1413
+        "amount": 3010
     },
     {
         "title": "Immigration and Refugee Board of Canada",
-        "amount": 208
+        "amount": 400
     },
     {
         "title": "Immigration, Refugees and Citizenship Canada",
@@ -137,23 +137,23 @@
     },
     {
         "title": "Indigenous Services Canada",
-        "amount": 3250
+        "amount": 1320
     },
     {
         "title": "Infrastructure Canada",
-        "amount": 250
+        "amount": 300
     },
     {
         "title": "Innovation, Science and Economic Development Canada",
-        "amount": 1335
+        "amount": 1337
     },
     {
         "title": "National Defence",
-        "amount": 1557
+        "amount": 1023
     },
     {
         "title": "National Energy Board",
-        "amount": 4
+        "amount": 7
     },
     {
         "title": "National Research Council Canada",
@@ -165,7 +165,7 @@
     },
     {
         "title": "Office of the Commissioner for Federal Judicial Affairs Canada",
-        "amount": 12
+        "amount": 10
     },
     {
         "title": "Offices of the Information and Privacy Commissionersof Canada",
@@ -173,7 +173,7 @@
     },
     {
         "title": "Parks Canada",
-        "amount": 368
+        "amount": 642
     },
     {
         "title": "Privy Council Office",
@@ -181,10 +181,10 @@
     },
     {
         "title": "Public Health Agency of Canada",
-        "amount": 79
+        "amount": 300
     },
     {
         "title": "Total",
-        "amount": 22023.3
+        "amount": 21808.5
     }
 ]

@@ -23,14 +23,14 @@ const getData = (jdata, colourset) =>{
 	};
 	var i;
 	var end = jdata.length - 1;
-	var decimal;
+	var decimal = 0;
 	for (i = 0; i < end; i++) {
 		data.labels.push(jdata[i].title);
 		decimal = jdata[i].amount / jdata[end].amount;
 		data.datasets[0].data.push(decimal);
 		data.datasets[0].backgroundColor.push(colourset[i]);
-		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
-	}
+    data.datasets[0].hoverBackgroundColor.push(colourset[i]);
+  }
 	return data;
 }
 
