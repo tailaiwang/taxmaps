@@ -91,3 +91,17 @@ h1, h4 {
 .btn-link {
   color: black !important;
 }
+
+#provincialchart {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#federalchart {
+}
+
+#federalinfo {
+  background-color: pink;
+  border-radius: 5px;
+}

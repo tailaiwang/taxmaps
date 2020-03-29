@@ -10,11 +10,13 @@ class AppRoute extends Component{
     render() {
         const history = createHistory();
         return (
+
             <Router history={history}>
                 <Route path="/" component={Dashboard} />
                 <Route path="/homeScreen" component={homeScreen} />
                 <Route path="/taxInformationInput" component={taxInformationInput} />
             </ Router>
+
         );
     }
 }
