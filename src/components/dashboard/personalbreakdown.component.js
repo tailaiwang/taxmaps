@@ -130,6 +130,27 @@ class PersonalBreakdown extends Component {
     render() {
         return (
           <div className="personalBreakdown">
+						<div id="personalinfo">
+							<h1>Your Personalized Breakdown: </h1>
+							<Container>
+								<Row>
+									<Col className="bdcat">
+										<h3>Povincial Taxes:</h3>
+										<h4>Income Tax Paid: ${}</h4>
+										<h4>GST Paid: ${}</h4>
+									</Col>
+									<Col className="bdcat">
+										<h3>Federal Taxes:</h3>
+										<h4>Income Tax Paid: ${}</h4>
+										<h4>HST Paid: ${}</h4>
+									</Col>
+								</Row>
+								<Row className="bdfin">
+									<h3 id="totalcont">Total Contributions: $</h3>
+								</Row>
+							</Container>
+						</div>
+						<hr />
 						<div className="chart" id="provincialchart">
 							<h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
 							<Doughnut

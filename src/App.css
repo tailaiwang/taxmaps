@@ -125,3 +125,26 @@ h1, h4 {
 .personsdpe {
   background-color: #ffce56;
 }
+
+#personalinfo {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.bdcat {
+  background-color: #f0f0f0;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.bdfin {
+  background-color: #5cb85c;
+  color: #f0f0f0;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+#totalcont {
+  margin-left: auto;
+  margin-right: auto;
+}
