@@ -6,7 +6,8 @@ import { requirements } from '../taxInformationInput'
 
 var fedexpenses =require('./assets/json/federal-expenses');
 var provexpenses = require('./assets/json/provincial-expenses-on');
-var colours = require('./assets/colour-set');
+var colours = require('./assets/colour-set')[0];
+var colours_fed = require('./assets/colour-set')[1];
 
 
 
@@ -107,7 +108,7 @@ class PersonalBreakdown extends Component {
 								<Row>
 									<Col>
 										<h1 className="personalHeader">Federal Personal Tax Breakdown</h1>
-										<Doughnut data={getData(fedexpenses, colours)} legend={legendOpts2}/>
+										<Doughnut data={getData(fedexpenses, colours_fed)} legend={legendOpts2}/>
 									</Col>
 									<Col>
 											<h1>What does this mean?</h1>
