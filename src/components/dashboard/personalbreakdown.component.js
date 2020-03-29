@@ -13,30 +13,40 @@ var income_fed_rates = require('./assets/json/income-tax-federal-rates');
 var income_fed_brackets = require('./assets/json/income-tax-federal');
 var income_prov_rates = require('./assets/json/income-tax-provincial-rates');
 var income_prov_brackets = require('./assets/json/income-tax-provincial');
-//var sales_tax = require('./assets/json/sales-tax');
+var sales_tax = require('./assets/json/sales-tax');
 
-const federal_income_tax = (income, fed_brackets, fed_rates) => {
-  var bracket_one_full = fed_brackets[0]["1"] * fed_rates[0]["1"]/100;
-  var bracket_two_full = (fed_brackets[0]["2"] - fed_brackets[0]["1"]) * fed_rates[0]["2"]/100;
-  var bracket_three_full = (fed_brackets[0]["3"] - fed_brackets[0]["2"]) * fed_rates[0]["3"]/100;
-  var bracket_four_full = (fed_brackets[0]["4"] - fed_brackets[0]["3"]) * fed_rates[0]["4"]/100;
+ 
 
-  if (income <= fed_brackets[0]["1"]) {
-    return income * fed_rates[0]["1"]/100;
+const income_tax = (income, brackets, rates) => {
+  var bracket_one_full = brackets["1"] * rates["1"]/100;
+  var bracket_two_full = (brackets["2"] - brackets["1"]) * rates["2"]/100;
+  var bracket_three_full = (brackets["3"] - brackets["2"]) * rates["3"]/100;
+  var bracket_four_full = (brackets["4"] - brackets["3"]) * rates["4"]/100;
+
+  if (income <= brackets["1"]) {
+    return income * rates["1"]/100;
   }
-  if (income > fed_brackets[0]["1"] && income <= fed_brackets[0]["2"]) {
-	return bracket_one_full + (income - fed_brackets[0]["1"]) * fed_rates[0]["2"]/100;
+  if (income > brackets["1"] && income <= brackets["2"]) {
+	return bracket_one_full + (income - brackets["1"]) * rates["2"]/100;
   }
-  if (income > fed_brackets[0]["2"] && income <= fed_brackets[0]["3"]) {
-	return bracket_one_full + bracket_two_full + (income - fed_brackets[0]["2"]) * fed_rates[0]["3"]/100;
+  if (income > brackets["2"] && income <= brackets["3"]) {
+	return bracket_one_full + bracket_two_full + (income - brackets["2"]) * rates["3"]/100;
   }
-  if (income > fed_brackets[0]["3"] && income <= fed_brackets[0]["4"]) {
-	return bracket_one_full + bracket_two_full + bracket_three_full + (income - fed_brackets[0]["3"]) * fed_rates[0]["4"]/100;
+  if (income > brackets["3"] && income <= brackets["4"]) {
+	return bracket_one_full + bracket_two_full + bracket_three_full + (income - brackets["3"]) * rates["4"]/100;
   }
-  if (income > fed_brackets[0]["4"]) {
-	return bracket_one_full + bracket_two_full + bracket_three_full + bracket_four_full + (income - fed_brackets[0]["4"]) * fed_rates[0]["5"]/100;
+  if (income > brackets["4"]) {
+	return bracket_one_full + bracket_two_full + bracket_three_full + bracket_four_full + (income - brackets["4"]) * rates["5"]/100;
   }
-} 
+}
+
+const getGST = (consumption, rates) => {
+	return consumption * rates["GST"]/100;
+}
+
+const getPST = (consumption, rates) => {
+	return consumption * rates["PST"]/100;
+}
 
 
 const getData = (jdata, colourset) => {
@@ -120,7 +130,17 @@ const legendOpts2 = {
 };
 
 class PersonalBreakdown extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+		  fed_income_tax: income_tax(requirements.income, income_fed_brackets[0], income_fed_rates[0]),
+		  prov_income_tax: income_tax(requirements.income, income_prov_brackets[5], income_prov_rates[5]),
+		  PST: getPST(requirements.consumption, sales_tax[6]),
+		  GST: getGST(requirements.consumption, sales_tax[6])
+		}
+	  }
     render() {
+		console.log(this.state);
         return (
           <div className="personalBreakdown">
 						<div id="personalinfo">
