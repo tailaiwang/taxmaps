@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import "../../App.css";
 import { Doughnut } from 'react-chartjs-2';
 
-var jsondata = require('./testing');
 var fedexpenses =require('./assets/json/federal-expenses');
 var provexpenses = require('./assets/json/provincial-expenses-on');
 var colours = require('./assets/colour-set');
