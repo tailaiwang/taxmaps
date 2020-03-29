@@ -69,3 +69,11 @@ h1, h4 {
 .personalHeader {
   margin-bottom: 3%
 }
+
+.poli-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
