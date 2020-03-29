@@ -6,6 +6,10 @@ import { Pie } from 'react-chartjs-2';
 
 var trudeaubudget =require('./assets/json/trudeau-budget');
 var trudeaupolicy = require('./assets/json/trudeau-policy-costs');
+var scheerbudget =require('./assets/json/scheer-budget');
+var scheerpolicy = require('./assets/json/scheer-policy-costs');
+var jagmeetbudget =require('./assets/json/jagmeet-budget');
+var jagmeetpolicy = require('./assets/json/jagmeet-policy-costs');
 var colours = require('./assets/colour-set');
 
 const getData = (jdata, colourset) =>{
@@ -61,10 +65,16 @@ class PoliticalCandidates extends Component {
                   <Pie data={getData(trudeaubudget, colours)} legend={legendOpts}/>
                 </Tab>
                 <Tab eventKey="can2" title="Andrew Scheer">
-                  <p>THE SECOND BEST IS TAILAI AND DANLU CUZ HES OKAY AT LOL</p>
+                  <h4>Conservative Party Proposed Policy Implementation Costs (2019 Election)</h4>
+                  <Pie data={getData(scheerpolicy, colours)} legend={legendOpts}/>
+                  <h4>Conservative Party Proposed Operating Budget (2019 Election)</h4>
+                  <Pie data={getData(scheerbudget, colours)} legend={legendOpts}/>
                 </Tab>
                 <Tab eventKey="can3" title="Jagmeet Singh">
-                  <p>TIE FOR THIRD PLACE W UKNOW WHO (R GILLAN)</p>
+                  <h4>New Democratic Party Proposed Policy Implementation Costs (2019 Election)</h4>
+                  <Pie data={getData(jagmeetpolicy, colours)} legend={legendOpts}/>
+                  <h4>New Democratic Party Party Proposed Operating Budget (2019 Election)</h4>
+                  <Pie data={getData(jagmeetbudget, colours)} legend={legendOpts}/>
                 </Tab>
                </Tabs>
               </div>
