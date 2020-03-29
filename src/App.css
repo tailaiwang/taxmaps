@@ -79,15 +79,20 @@ h1, h4 {
 }
 
 .dropzone {
-  border:3px dotted grey;
-  background-color: lightgrey;
+  border:3px dotted lightgrey;
+  border-radius: 10px;
+  background-color: #f0f0f0;
   margin-top: 5%;
   padding: 100px;
   padding-left: 0px;
   margin-left: 10%;
   margin-right: 10%;
 }
-
+#dropzone-txt {
+  width: 100%;
+  text-align: center;
+  margin-left: 5%;
+}
 .btn-link {
   color: black !important;
 }
