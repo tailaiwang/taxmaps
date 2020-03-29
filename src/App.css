@@ -87,3 +87,7 @@ h1, h4 {
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.btn-link {
+  color: black !important;
+}

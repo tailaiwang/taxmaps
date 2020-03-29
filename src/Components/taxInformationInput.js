@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import history from 'history/createBrowserHistory';
-
-
+import {Link, Route} from 'react-router-dom';
+import PersonalBreakdown from './dashboard/personalbreakdown.component'
 
 class taxInformationInput extends Component {
   constructor(props) {
@@ -98,9 +97,13 @@ class taxInformationInput extends Component {
                 onChange={this.handleChange}
                 />
               </ Form.Group>
-              <Button className="submit-btn" variant="success" type="submit" onClick={this.handleSubmit.bind(this)} >
-                Submit
-              </Button>
+
+                <Button className="submit-btn" variant="success" type="submit" onClick={this.handleSubmit.bind(this)}>
+                  <Link className="btn-link" to="/personal-breakdown">Submit</Link>
+                </Button>
+                <Route path="/personal-breakdown">
+                  <PersonalBreakdown />
+                </Route>
             </ Form>
         );
     }
