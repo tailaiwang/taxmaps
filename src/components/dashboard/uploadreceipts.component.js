@@ -20,6 +20,7 @@ class UploadReceipts extends Component {
             ));
 
         return (
+<<<<<<< Updated upstream
             <Dropzone className="dropzone" onDrop={this.onDrop}>
             {({getRootProps, getInputProps}) => (
               <section className="container">
@@ -28,12 +29,18 @@ class UploadReceipts extends Component {
                   <ul>{files}</ul>
                 </aside>
                 <div {...getRootProps({className: 'dropzone'})}>
+=======
+          <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
+            {({getRootProps, getInputProps}) => (
+              <section>
+                <div {...getRootProps()}>
+>>>>>>> Stashed changes
                   <input {...getInputProps()} />
                   <p>Drag 'n' drop some files here, or click to select files</p>
                 </div>
               </section>
             )}
-          </Dropzone>
+        </Dropzone>
         );
       }
     }
