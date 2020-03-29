@@ -7,6 +7,7 @@ var propertytax = require('./assets/json/property-tax');
 const getData = (jdata) =>{
 	var data = [];
 	var i;
+  var j;
   var end = jdata.length;
   var lat;
   var lng;
@@ -16,7 +17,25 @@ const getData = (jdata) =>{
     lng = jdata[i].long;
     rate = jdata[i].rate;
     data.push({"lat": lat, "lng": lng});
+    if (jdata[i].rate < 1) {
+      for (j = 0; j < 13; j++) {
+        data.push({"lat": lat, "lng": lng});
+      }
+    } else if (jdata[i].rate < 1.25) {
+      for (j  = 0; j < 23; j++) {
+        data.push({"lat": lat, "lng": lng});
+      }
+    } else if (jdata[i].rate < 1.5) {
+      for (j  = 0; j < 33; j++) {
+        data.push({"lat": lat, "lng": lng});
+      }
+    } else if (jdata[i].rate > 1.5) {
+      for (j  = 0; j < 50; j++) {
+        data.push({"lat": lat, "lng": lng});
+      }
+    }
   }
+
   console.log(data);
 	return data;
 }
@@ -24,10 +43,10 @@ const getData = (jdata) =>{
 class PropertyTaxMap extends Component {
   static defaultProps = {
     center: {
-      lat: 50.150341,
-      lng: -85.016414
+      lat: 44.150341,
+      lng: -82.016414
     },
-    zoom: 5.5
+    zoom: 7
   }
 
   constructor(props) {
@@ -44,7 +63,7 @@ class PropertyTaxMap extends Component {
   	const heatMapData = {
   		positions: this.state.heatmapPoints,
 		options: {
-			radius: 20,
+			radius: 15,
 			opacity: 0.6
 		}
   	}
