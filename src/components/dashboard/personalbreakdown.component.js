@@ -179,7 +179,7 @@ class PersonalBreakdown extends Component {
 								<Row>
 									<Col>
 										<h1 className="personalHeader">Federal Personal Tax Breakdown</h1>
-										<Doughnut data={getData(this.state.total_contribution, fedexpenses, colours_fed)} legend={legendOpts2}/>
+										<Doughnut data={getData(this.state.fed_contribution, fedexpenses, colours_fed)} legend={legendOpts2}/>
 									</Col>
 									<Col>
 											<h1>What does this mean?</h1>
@@ -201,7 +201,7 @@ class PersonalBreakdown extends Component {
 						<div className="chart" id="provincialchart">
 							<h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
 							<Doughnut
-							data={getData2(this.state.total_contribution, provexpenses, colours)}
+							data={getData2(this.state.prov_contribution, provexpenses, colours)}
 							legend={legendOpts}/>
               <h1>Your federal contribution is: {this.state.fed_contribution}</h1>
 						</div>
