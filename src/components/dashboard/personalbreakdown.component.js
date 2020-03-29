@@ -51,6 +51,7 @@ const getData2 = (jdata, colourset) =>{
 	return data;
 }
 
+
 const legendOpts = {
   display: true,
   position: 'right',
@@ -76,9 +77,9 @@ class PersonalBreakdown extends Component {
             <div className="chart">
               <h1 className="personalHeader">Personal Tax Breakdown</h1>
               <Doughnut data={getData(fedexpenses, colours)} legend={legendOpts}/>
-              </div>
+            </div>
               
-              <div className="chart">
+            <div className="chart">
               <h1 className="personalHeader">Tax Contributions and Spending</h1>
               <Doughnut 
               data={getData2(provexpenses, colours)} 
