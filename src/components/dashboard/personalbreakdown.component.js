@@ -194,7 +194,7 @@ class PersonalBreakdown extends Component {
 									</Col>
 								</Row>
 								<Row className="bdfin">
-									<h3>Your provincial contribution is: ${this.state.prov_contribution}</h3>
+									<h3>Your federal contribution is: ${this.state.fed_contribution}</h3>
 								</Row>
 							</Container>
             </div>
@@ -206,8 +206,9 @@ class PersonalBreakdown extends Component {
 							data={getData2(this.state.prov_contribution, provexpenses, colours)}
 							legend={legendOpts}/>
 							<Row className="bdfin">
-								<h3>Your federal contribution is: ${this.state.fed_contribution}</h3>
+								<h3>Your provincial contribution is: ${this.state.prov_contribution}</h3>
 							</Row>
+							
 						</div>
           </div>
         );
