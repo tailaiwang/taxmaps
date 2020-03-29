@@ -20,17 +20,17 @@ class UploadReceipts extends Component {
             ));
 
         return (
-            <Dropzone onDrop={this.onDrop}>
+            <Dropzone className="dropzone" onDrop={this.onDrop}>
             {({getRootProps, getInputProps}) => (
               <section className="container">
+                                  <aside>
+                  <h1>Upload your files here</h1>
+                  <ul>{files}</ul>
+                </aside>
                 <div {...getRootProps({className: 'dropzone'})}>
                   <input {...getInputProps()} />
                   <p>Drag 'n' drop some files here, or click to select files</p>
                 </div>
-                <aside>
-                  <h4>Files</h4>
-                  <ul>{files}</ul>
-                </aside>
               </section>
             )}
           </Dropzone>

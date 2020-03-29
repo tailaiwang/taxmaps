@@ -77,3 +77,13 @@ h1, h4 {
   flex-wrap: wrap;
   padding: 10px;
 }
+
+.dropzone {
+  border:3px dotted grey;
+  background-color: lightgrey;
+  margin-top: 5%;
+  padding: 100px;
+  padding-left: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
