@@ -4,6 +4,15 @@ import Button from 'react-bootstrap/Button';
 import {Link, Route} from 'react-router-dom';
 import PersonalBreakdown from './dashboard/personalbreakdown.component'
 
+
+var requirements = {
+  income: undefined,
+  consumption: undefined,
+  property: undefined,
+  property_tax: undefined,
+  postal: undefined
+}
+
 class taxInformationInput extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +39,13 @@ class taxInformationInput extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
+    requirements.income = this.state.income;
+    requirements.consumption = this.state.consumption;
+    requirements.property = this.state.property;
+    requirements.property_tax = this.state.property_tax;
+    requirements.postal = this.state.postal;
+
+    console.log("good");
   }
     render() {
         return (
@@ -109,4 +124,5 @@ class taxInformationInput extends Component {
     }
 }
 
+export { requirements };
 export default taxInformationInput;

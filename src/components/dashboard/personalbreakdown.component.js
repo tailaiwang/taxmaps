@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 import "../../App.css";
 import { Doughnut } from 'react-chartjs-2';
+import { requirements } from '../taxInformationInput'
 
 var fedexpenses =require('./assets/json/federal-expenses');
 var provexpenses = require('./assets/json/provincial-expenses-on');
 var colours = require('./assets/colour-set');
+
+
+
 
 const getData = (jdata, colourset) => {
 	var data = {
@@ -44,6 +48,7 @@ const getData2 = (jdata, colourset) =>{
 		data.labels.push(jdata[i].title);
 		decimal = jdata[i].amount / jdata[end].amount;
 		data.datasets[0].data.push(decimal);
+		console.log(requirements.property_tax);
 		data.datasets[0].backgroundColor.push(colourset[i]);
 		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
 	}
