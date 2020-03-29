@@ -63,7 +63,7 @@ class PropertyTaxMap extends Component {
   	const heatMapData = {
   		positions: this.state.heatmapPoints,
 		options: {
-			radius: 15,
+			radius: 25,
 			opacity: 0.6
 		}
   	}
