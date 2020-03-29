@@ -10,7 +10,7 @@ var scheerbudget =require('./assets/json/scheer-budget');
 var scheerpolicy = require('./assets/json/scheer-policy-costs');
 var jagmeetbudget =require('./assets/json/jagmeet-budget');
 var jagmeetpolicy = require('./assets/json/jagmeet-policy-costs');
-var colours = require('./assets/colour-set');
+var colours = require('./assets/colour-set')[0];
 
 const getData = (jdata, colourset) =>{
 	var data = {
