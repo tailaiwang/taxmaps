@@ -1,0 +1,212 @@
+[
+    {
+        "city": "Toronto",
+        "lat": 43.65224,
+        "long": -79.383905,
+        "rate": 0.614770
+    },
+    {
+        "city": "Ottawa",
+        "lat": 45.430512,
+        "long": -75.697459,
+        "rate": 1.076669
+    },
+    {
+        "city": "Windsor",
+        "lat": 42.314423,
+        "long": -83.036564,
+        "rate": 1.79
+    },
+    {
+        "city": "Markham",
+        "lat": 42.4022548,
+        "long": -82.190827,
+        "rate": 0.659822
+    },
+    {
+        "city": "Milton",
+        "lat": 43.5183,
+        "long": -79.8774,
+        "rate": 0.685776
+    },
+    {
+        "city": "Richmond Hill",
+        "lat": 43.87111,
+        "long": -79.43725,
+        "rate": 0.688357
+    },
+    {
+        "city": "Vaughan",
+        "lat": 43.8361,
+        "long": -79.49827,
+        "rate": 0.696147
+    },
+    {
+        "city": "Oakville",
+        "lat": 43.45011,
+        "long": -79.68292,
+        "rate": 0.734441
+    },
+    {
+        "city": "Burlington",
+        "lat": 43.38621,
+        "long": -79.83713,
+        "rate": 0.783768
+    },
+    {
+        "city": "Aurora",
+        "lat": 44.0065,
+        "long": -79.4504,
+        "rate": 0.786101
+    },
+    {
+        "city": "Mississauga",
+        "lat": 43.5789,
+        "long": -79.6583,
+        "rate": 0.801443
+    },
+    {
+        "city": "Halton Hills",
+        "lat": 43.6470,
+        "long": 80.0177,
+        "rate": 0.803785
+    },
+    {
+        "city": "Caledon",
+        "lat": 43.8363,
+        "long": -79.8745,
+        "rate": 0.817007
+    },
+    {
+        "city": "Newmarket",
+        "lat": 44.0592,
+        "long": -79.4613,
+        "rate": 0.820466
+    },
+    {
+        "city": "Brampton",
+        "lat": 43.68341,
+        "long": -79.76633,
+        "rate": 0.990771
+    },
+    {
+        "city": "Waterloo",
+        "lat": 43.4643,
+        "long": -80.5204,
+        "rate": 1.076669
+    },
+    {
+        "city": "Pickering",
+        "lat": 43.8384,
+        "long": -79.0868,
+        "rate": 1.103511
+    },
+    {
+        "city": "Ajax",
+        "lat": 43.8509,
+        "long": -79.0204,
+        "rate": 1.107287
+    },
+    {
+        "city": "Kitchener",
+        "lat": 43.446976,
+        "long": -80.472484,
+        "rate": 1.110840
+    },
+    {
+        "city": "Whitby",
+        "lat": 43.8975,
+        "long": -78.9429,
+        "rate": 1.139696
+    },
+    {
+        "city": "Guelph",
+        "lat": 43.54594,
+        "long": -80.25599,
+        "rate": 1.140523
+    },
+    {
+        "city": "Cambridge",
+        "lat": 43.3601,
+        "long": -80.31269,
+        "rate": 1.184230
+    },
+    {
+        "city": "Hamilton",
+        "lat": 43.256101,
+        "long": -79.857484,
+        "rate": 1.221870
+    },
+    {
+        "city": "Barrie",
+        "lat": 44.383333,
+        "long": -79.7,
+        "rate": 1.232466
+    },
+    {
+        "city": "Niagara Falls",
+        "lat": 43.0896,
+        "long": -79.0849,
+        "rate": 1.284300
+    },
+    {
+        "city": "London",
+        "lat": 42.983333,
+        "long": -81.25,
+        "rate": 1.340225
+    },
+    {
+        "city": "Kingston",
+        "lat": 44.3,
+        "long": -76.566667,
+        "rate": 1.342238
+    },
+    {
+        "city": "Orangeville",
+        "lat": 43.9200,
+        "long": -80.0943,
+        "rate": 1.343032
+    },
+    {
+        "city": "Oshawa",
+        "lat": 43.9,
+        "long": -78.866667,
+        "rate": 1.344725
+    },
+    {
+        "city": "Peterborough",
+        "lat": 44.3091,
+        "long": -78.3197,
+        "rate": 1.410742
+    },
+    {
+        "city": "St. Catherines",
+        "lat": 43.17126,
+        "long": -79.24267,
+        "rate": 1.421180
+    },
+    {
+        "city": "Sudbury",
+        "lat": 46.5,
+        "long": -80.966667,
+        "rate": 1.461888
+    },
+    {
+        "city": "North Bay",
+        "lat": 46.3091,
+        "long": -79.4608,
+        "rate": 1.501246
+    },
+    {
+        "city": "Sault Ste. Marie",
+        "lat": 46.5136,
+        "long": -84.3358,
+        "rate": 1.529349
+    },
+    {
+        "city": "Thunder Bay",
+        "lat": 48.4,
+        "long": -89.233333,
+        "rate": 1.789394
+    }
+]
