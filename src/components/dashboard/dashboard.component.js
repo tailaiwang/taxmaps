@@ -22,6 +22,7 @@ class Dashboard extends Component {
               </Navbar.Brand>
               <NavLink className="main-anchor" to="/taxInformationInput">Tax Input</ NavLink>
               <NavLink className="main-anchor" to="/personal-breakdown">Personal Breakdown</ NavLink>
+              <NavLink className="main-anchor" to="/property-tax-map">Property Tax Map</ NavLink>
               <NavLink className="main-anchor" to="/political-candidates">Political Candidates</ NavLink>
               <NavLink className="main-anchor" to="/upload-receipts">Upload Receipts</ NavLink>
 

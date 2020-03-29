@@ -63,7 +63,7 @@ class PersonalBreakdown extends Component {
         return (
             <div className="personalBreakdown">
             <div className="Chart">
-              <h1>the chart goes here</h1>
+              <h1>Personal Tax Breakdown</h1>
               <Pie data={getData(fedexpenses, colours)} />
 			  <h1>the next chart goes here</h1>
 			  <Pie data={getData2(provexpenses, colours)}/>
