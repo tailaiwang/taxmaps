@@ -75,12 +75,12 @@ class PersonalBreakdown extends Component {
         return (
           <div className="personalBreakdown">
             <div className="chart">
-              <h1 className="personalHeader">Personal Tax Breakdown</h1>
+              <h1 className="personalHeader">Federal Personal Tax Breakdown</h1>
               <Doughnut data={getData(fedexpenses, colours)} legend={legendOpts}/>
             </div>
               
             <div className="chart">
-              <h1 className="personalHeader">Tax Contributions and Spending</h1>
+              <h1 className="personalHeader">Provincial Tax Contributions and Spending</h1>
               <Doughnut 
               data={getData2(provexpenses, colours)} 
               legend={legendOpts}/>
