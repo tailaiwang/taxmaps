@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import "../../App.css";
 import {Pie} from 'react-chartjs-2';
+import "../../App.css";
 
 var jsondata = require('./testing');
 var fedexpenses =require('./assets/json/federal-expenses');
@@ -45,10 +45,8 @@ const getData2 = (jdata, colourset) =>{
 	var decimal;
 	for (i = 0; i < end; i++) {
 		data.labels.push(jdata[i].title);
-		console.log(jdata[i].title);
 		decimal = jdata[i].amount / jdata[end].amount;
 		data.datasets[0].data.push(decimal);
-		console.log(decimal);
 		data.datasets[0].backgroundColor.push(colourset[i]);
 		data.datasets[0].hoverBackgroundColor.push(colourset[i]);
 	}
@@ -56,15 +54,16 @@ const getData2 = (jdata, colourset) =>{
 }
 
 class PersonalBreakdown extends Component {
-
     render() {
         return (
-            <div className="personalBreakdown">
-            <div className="Chart">
-              <h1>Personal Tax Breakdown</h1>
+          <div className="personalBreakdown">
+            <div className="chart">
+              <h1 className="personalHeader">Personal Tax Breakdown</h1>
               <Pie data={getData(fedexpenses, colours)} />
-			  <h1>the next chart goes here</h1>
-			  <Pie data={getData2(provexpenses, colours)}/>
+              </div>
+              <div className="chart">
+              <h1 className="personalHeader">Tax Contributions and Spending</h1>
+              <Pie data={getData2(provexpenses, colours)}/>
             </div>
           </div>
         );

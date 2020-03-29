@@ -56,3 +56,16 @@ h1, h4 {
 .poli-tabs a:hover {
   color: grey;
 }
+
+.personalBreakdown {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.chart {
+  margin-bottom: 10%
+}
+
+.personalHeader {
+  margin-bottom: 2%
+}
