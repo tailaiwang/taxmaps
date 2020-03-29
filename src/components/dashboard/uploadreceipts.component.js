@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Dropzone from 'react-dropzone'
 
+
 class UploadReceipts extends Component {
     constructor() {
         super();
