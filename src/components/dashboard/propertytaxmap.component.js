@@ -15,9 +15,9 @@ class PropertyTaxMap extends Component {
             <h1>Property Tax Heat Map</ h1>
             <Map
               google={this.props.google}
-              zoom={8}
+              zoom={3.5}
               style={mapStyles}
-              initialCenter={{lat: 47.444, lng: -122.176}}
+              initialCenter={{lat: 55.0000, lng: -100.0000}}
             />
           </div>
         );
