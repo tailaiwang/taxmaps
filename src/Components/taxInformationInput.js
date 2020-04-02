@@ -59,6 +59,8 @@ class taxInformationInput extends Component {
                   placeholder=""
                   value={this.state.income}
                   onChange={this.handleChange}
+                  pattern="[0-9]*" 
+                  inputmode="numeric"
                   />
                   <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </ Form.Group>
@@ -71,12 +73,14 @@ class taxInformationInput extends Component {
                 placeholder=""
                 value={this.state.consumption}
                 onChange={this.handleChange}
+                pattern="[0-9]*" 
+                inputmode="numeric"
                 />
                 <Form.Text className="text-muted">
                   Enter an estimate of your annual spending
                 </ Form.Text>
               </ Form.Group>
-              <Form.Group controlId="inputForm.checkPT">
+              {/*<Form.Group controlId="inputForm.checkPT">
                 <Form.Label>Do you own taxable property?</ Form.Label>
                 <Form.Check
                 inline
@@ -92,6 +96,7 @@ class taxInformationInput extends Component {
                 type="radio"
                 id="noPT"/>
               </ Form.Group>
+        */}
               <Form.Group controlId="inputForm.propertyTax">
                 <Form.Label>Property Tax</ Form.Label>
                 <Form.Control
@@ -100,8 +105,29 @@ class taxInformationInput extends Component {
                 type="number"
                 placeholder=""
                 onChange={this.handleChange}
+                pattern="[0-9]*" 
+                inputmode="numeric"
                 />
+                <Form.Text className="text-muted">
+                  Enter 0 if you do not own taxable property
+                </ Form.Text>
               </ Form.Group>
+              <Form.Group controlId="inputForm.province">
+               <Form.Label>Province</Form.Label>
+               <Form.Control as="select" required onChange={this.handleChange}>
+                <option>Alberta</option>
+                <option>British Columbia</option>
+                <option>Manitoba</option>
+                <option>New Brunswick</option>
+                <option>Newfoundland and Labrador</option>
+                <option>Nova Scotia</option>
+                <option>Ontario</option>
+                <option>Prince Edward Island</option>
+                <option>Quebec</option>
+                <option>Saskatchewan</option>
+               </Form.Control>
+              </Form.Group>
+              {/*}
               <Form.Group controlId="inputForm.postalCode">
                 <Form.Label>Postal Code</ Form.Label>
                 <Form.Control
@@ -112,7 +138,7 @@ class taxInformationInput extends Component {
                 onChange={this.handleChange}
                 />
               </ Form.Group>
-
+      */}
                 <Button className="submit-btn" variant="success" type="submit" onClick={this.handleSubmit.bind(this)}>
                   <Link className="btn-link" to="/personal-breakdown">Submit</Link>
                 </Button>
